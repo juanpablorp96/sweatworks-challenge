@@ -2,10 +2,10 @@ Feature: Login
 
   Scenario: Verify Login
     Given I go to saucedemo.com
-    When I type "<userName>" in the "user-name" field
-    And I type "<password>" in the "password" field
-    And I click on "login-button"
-    Then I should see "Swag Labs"
+    When I type "<userName>" in "loginPage: usernameField"
+    And I type "<password>" in "loginPage: passwordField"
+    And I click on "loginPage: loginButton"
+    Then I should see text "Products"
 
   Examples:
     | userName      | password     |
