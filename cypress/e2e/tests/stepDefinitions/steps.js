@@ -23,3 +23,10 @@ When("I click on {string}", (button) => {
 Then("I should see text {string}", (text) => {
     cy.contains(text).should('be.visible');
 });
+
+Then("I should see {string}", (element) => {
+    const pageObjectArray = parseLocator(element);
+    cy.fixture(`${pageObjectArray[0]}.json`).then((locator) => {
+        cy.get(locator[pageObjectArray[1]]).should('be.visible');
+    })
+});
