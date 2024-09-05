@@ -10,6 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^13.14.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/tests/stepDefinitions/*.js"
   }
 }
