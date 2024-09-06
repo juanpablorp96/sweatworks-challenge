@@ -1,4 +1,7 @@
 {
   "hamburgerMenu": "#react-burger-menu-btn",
-  "logoutButton": "#logout_sidebar_link"
+  "logoutButton": "#logout_sidebar_link",
+  "addToCartButton": "#add-to-cart-{}",
+  "removeButton": "#remove-{}",
+  "cartBadge": ".shopping_cart_badge"
 }

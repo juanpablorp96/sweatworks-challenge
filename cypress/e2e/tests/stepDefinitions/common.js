@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import parseLocator from "../../../support/utils";
+import { parseLocator } from "../../../support/utils";
 
 
 Given("I go to saucedemo.com", () => {
@@ -28,5 +28,12 @@ Then("I should see {string}", (element) => {
     const pageObjectArray = parseLocator(element);
     cy.fixture(`${pageObjectArray[0]}.json`).then((locator) => {
         cy.get(locator[pageObjectArray[1]]).should('be.visible');
+    })
+});
+
+Then("I should see {string} with text {string}", (element, text) => {
+    const pageObjectArray = parseLocator(element);
+    cy.fixture(`${pageObjectArray[0]}.json`).then((locator) => {
+        cy.get(locator[pageObjectArray[1]]).should('have.text', text);
     })
 });
