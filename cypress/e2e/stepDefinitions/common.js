@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { parseLocator } from "../../../support/utils";
+import { parseLocator } from "../../support/utils";
 
 
 Given("I go to saucedemo.com", () => {

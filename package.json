@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "e2e:chrome": "cypress run --browser chrome",
+    "e2e:chromeHeaded": "cypress run --browser chrome --headed",
+    "e2e:firefox": "cypress run --browser firefox",
+    "e2e:firefoxHeaded": "cypress run --browser firefox --headed"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "stepDefinitions": "cypress/e2e/tests/stepDefinitions/*.js"
+    "stepDefinitions": "cypress/e2e/stepDefinitions/*.js"
   }
 }

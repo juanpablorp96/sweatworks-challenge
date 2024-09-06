@@ -1,5 +1,5 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { formatDynamicLocator } from "../../../support/utils";
+import { formatDynamicLocator } from "../../support/utils";
 
 
 When("I add product {string} to cart", (productName) => {
