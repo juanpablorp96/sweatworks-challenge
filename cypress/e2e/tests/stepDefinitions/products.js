@@ -8,8 +8,20 @@ When("I add product {string} to cart", (productName) => {
     })
 });
 
+When("I remove product {string} from cart", (productName) => {
+    cy.fixture('productsPage.json').then((locator) => {
+        cy.get(formatDynamicLocator(locator.removeButton, productName)).click();
+    })
+});
+
 Then("I should see remove button for product {string}", (productName) => {
     cy.fixture('productsPage.json').then((locator) => {
         cy.get(formatDynamicLocator(locator.removeButton, productName)).should('be.visible');
+    })
+});
+
+Then("I should not see remove button for product {string}", (productName) => {
+    cy.fixture('productsPage.json').then((locator) => {
+        cy.get(formatDynamicLocator(locator.removeButton, productName)).should('not.exist');
     })
 });

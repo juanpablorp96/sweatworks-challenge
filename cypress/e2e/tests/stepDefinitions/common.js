@@ -31,6 +31,13 @@ Then("I should see {string}", (element) => {
     })
 });
 
+Then("I should not see {string}", (element) => {
+    const pageObjectArray = parseLocator(element);
+    cy.fixture(`${pageObjectArray[0]}.json`).then((locator) => {
+        cy.get(locator[pageObjectArray[1]]).should('not.exist');
+    })
+});
+
 Then("I should see {string} with text {string}", (element, text) => {
     const pageObjectArray = parseLocator(element);
     cy.fixture(`${pageObjectArray[0]}.json`).then((locator) => {
