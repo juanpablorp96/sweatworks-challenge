@@ -1,0 +1,8 @@
+{
+  "firstNameField": "#first-name",
+  "lastNameField": "#last-name",
+  "zipCodeField": "#postal-code",
+  "continueButton": "#continue",
+  "finishButton": "#finish",
+  "backHomeButton": "#back-to-products"
+}
